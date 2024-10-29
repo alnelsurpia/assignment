@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Cards</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Teacher Cards</h1>
+        <div id="cards-container"></div>
+    </div>
+
+    <script>
+        const teachers = [
+            {
+                name: "Alnel",
+                subject: "Mathematics",
+                imageUrl: "user.png",
+            },
+            {
+                name: "Francis",
+                subject: "Science",
+                imageUrl: "user.png",
+            },
+            {
+                name: "Surpia",
+                subject: "History",
+                imageUrl: "user.png",
+            }
+        ];
+
+        function createCard(teacher) {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+                <img src="${teacher.imageUrl}" alt="${teacher.name}">
+                <h2>${teacher.name}</h2>
+                <p>${teacher.subject}</p>
+                <button onclick="bookClass('${teacher.name}')">Book a Class</button>
+            `;
+            return card;
+        }
+
+        function bookClass(teacherName) {
+            alert(`You have booked a class with ${teacherName}!`);
+        }
+
+        function displayTeachers() {
+            const container = document.getElementById('cards-container');
+            teachers.forEach(teacher => {
+                const card = createCard(teacher);
+                container.appendChild(card);
+            });
+        }
+
+        window.onload = displayTeachers;
+    </script>
+</body>
+</html>
