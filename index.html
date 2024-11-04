@@ -64,14 +64,14 @@
             `;
             return card;
         }
-        function createCard(prjsampleIMG) {
+        function createCard(sampleIMG) {
             const card = document.createElement('div');
             card.className = 'card';
             card.innerHTML = `
-                <img src="${prjsampleIMG.imageUrl}" alt="${prjsampleIMG.name}">
-                <h2>${prjsampleIMG.name}</h2>
-                <p>${prjsampleIMG.subject}</p>
-                <button onclick="bookClass('${prjsampleIMG.name}')">Book a Class</button>
+                <img src="${sampleIMG.imageUrl}" alt="${sampleIMG.name}">
+                <h2>${sampleIMG.name}</h2>
+                <p>${sampleIMG.subject}</p>
+                <button onclick="bookClass('${sampleIMG.name}')">Book a Class</button>
             `;
             return card;
         }
