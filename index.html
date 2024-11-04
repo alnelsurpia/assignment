@@ -11,6 +11,11 @@
         <h1>Teacher Cards</h1>
         <div id="cards-container"></div>
     </div>
+    <br>
+    <div class="container">
+        <h1>Project Images Samples</h1>
+        <div id="prjimages"></div>
+    </div>
 
     <script>
         const teachers = [
@@ -49,6 +54,13 @@
 
         function displayTeachers() {
             const container = document.getElementById('cards-container');
+            teachers.forEach(teacher => {
+                const card = createCard(teacher);
+                container.appendChild(card);
+            });
+        }
+        function displayImages() {
+            const container = document.getElementById('prjimages');
             teachers.forEach(teacher => {
                 const card = createCard(teacher);
                 container.appendChild(card);
