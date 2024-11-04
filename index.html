@@ -84,7 +84,10 @@
             });
         }
 
-        window.onload = displayTeachers;
+        window.onload = function() {
+            displayTeachers();
+            displayImages();
+        }
     </script>
 </body>
 </html>
