@@ -64,6 +64,17 @@
             `;
             return card;
         }
+        function createCard(prjsampleIMG) {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+                <img src="${prjsampleIMG.imageUrl}" alt="${prjsampleIMG.name}">
+                <h2>${prjsampleIMG.name}</h2>
+                <p>${prjsampleIMG.subject}</p>
+                <button onclick="bookClass('${prjsampleIMG.name}')">Book a Class</button>
+            `;
+            return card;
+        }
 
         function bookClass(teacherName) {
             alert(`You have booked a class with ${teacherName}!`);
