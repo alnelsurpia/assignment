@@ -64,7 +64,7 @@
             `;
             return card;
         }
-        function createCard(sampleIMG) {
+        function createimg(sampleIMG) {
             const card = document.createElement('div');
             card.className = 'card';
             card.innerHTML = `
@@ -90,7 +90,7 @@
         function displayImages() {
             const container = document.getElementById('prjimages');
             teachers.forEach(prjsampleIMG => {
-                const card = createCard(prjsampleIMG);
+                const card = createimg(prjsampleIMG);
                 container.appendChild(card);
             });
         }
