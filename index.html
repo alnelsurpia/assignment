@@ -35,6 +35,23 @@
                 imageUrl: "user.png",
             }
         ];
+        const prjsampleIMG = [
+            {
+                name: "Alnel",
+                subject: "Mathematics",
+                imageUrl: "images/newposter1.jpg",
+            },
+            {
+                name: "Francis",
+                subject: "Science",
+                imageUrl: "images/Asset4.png",
+            },
+            {
+                name: "Surpia",
+                subject: "History",
+                imageUrl: "images/houseprj.jpg",
+            }
+        ];
 
         function createCard(teacher) {
             const card = document.createElement('div');
@@ -60,9 +77,9 @@
             });
         }
         function displayImages() {
-            const container = document.getElementById('prjimages');
-            teachers.forEach(teacher => {
-                const card = createCard(teacher);
+            const container = document.getElementById('prjsampleIMG');
+            teachers.forEach(prjsampleIMG => {
+                const card = createCard(prjsampleIMG);
                 container.appendChild(card);
             });
         }
