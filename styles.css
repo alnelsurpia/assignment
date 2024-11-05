@@ -6,7 +6,8 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 80%;
+    align-items: center;
     margin: auto;
 }
 
@@ -17,7 +18,12 @@ h1 {
 
 #cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+#prjimages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
 
@@ -37,7 +43,8 @@ h1 {
 }
 
 .card img {
-    border-radius: 50%;
+    /* border-radius: 50%; */
+    border-radius: 10px;
     margin-bottom: 10px;
     width: 100px; /* Adjust as needed */
     height: 100px; /* Adjust as needed */
