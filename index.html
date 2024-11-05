@@ -11,9 +11,9 @@
         <h1>Teacher Cards</h1>
         <div id="cards-container"></div>
     </div>
-    <br>
+    <!-- <br> -->
     <div class="container">
-        <h1>Project Images Samples</h1>
+        <h1>Images Samples</h1>
         <div id="prjimages"></div>
     </div>
 
@@ -37,19 +37,70 @@
         ];
         const prjsampleIMG = [
             {
-                name: "Alnel",
-                subject: "Mathematics",
+                name: "1",
+                subject: "Made with Photoshop",
                 imageUrl: "images/newposter1.jpg",
             },
             {
-                name: "Francis",
-                subject: "Science",
+                subject: "Made with illustrator",
                 imageUrl: "images/Asset4.png",
             },
             {
-                name: "Surpia",
-                subject: "History",
+                subject: "Made with Blender",
                 imageUrl: "images/houseprj.jpg",
+            },
+            {
+                subject: "Made with Adobe Xd",
+                imageUrl: "images/xd_samples.PNG",
+            },
+            {
+                subject: "Made with Photoshop",
+                imageUrl: "images/trabahadoor_logo.png",
+            },
+            {
+                subject: "Made with Photoshop",
+                imageUrl: "images/action_shots1.jpg",
+            },
+            {
+                subject: "Made with Photoshop",
+                imageUrl: "images/7.jpg",
+            },
+            {
+                subject: "Made with Photoshop",
+                imageUrl: "images/8.jpg",
+            },
+            {
+                subject: "Made with Photoshop",
+                imageUrl: "images/9.jpg",
+            },
+            // ====
+            {
+                subject: "Made with Adobe Xd",
+                imageUrl: "images/10.png",
+            },
+            {
+                subject: "Made with Adobe Xd",
+                imageUrl: "images/11.PNG",
+            },
+            {
+                subject: "Made with Adobe Xd",
+                imageUrl: "images/12.png",
+            },
+            {
+                subject: "Made with Adobe Xd",
+                imageUrl: "images/13.png",
+            },
+            {
+                subject: "Made with Adobe Xd",
+                imageUrl: "images/14.png",
+            },
+            {
+                subject: "Made with Adobe Xd",
+                imageUrl: "images/15.png",
+            },
+            {
+                subject: "Made with Adobe Xd",
+                imageUrl: "images/16.png",
             }
         ];
 
@@ -69,9 +120,8 @@
             card.className = 'card';
             card.innerHTML = `
                 <img src="${sampleIMG.imageUrl}" alt="${sampleIMG.name}">
-                <h2>${sampleIMG.name}</h2>
                 <p>${sampleIMG.subject}</p>
-                <button onclick="bookClass('${sampleIMG.name}')">Book a Class</button>
+                <a href ="${sampleIMG.imageUrl}"  target="_blank"><button>View</button></a>
             `;
             return card;
         }
@@ -89,7 +139,7 @@
         }
         function displayImages() {
             const container = document.getElementById('prjimages');
-            teachers.forEach(prjsampleIMG => {
+            prjsampleIMG.forEach(prjsampleIMG => {
                 const card = createimg(prjsampleIMG);
                 container.appendChild(card);
             });
